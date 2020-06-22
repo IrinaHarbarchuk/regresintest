@@ -4,7 +4,12 @@ C:\Users\kathe\source\repos\Reqres.In\Reqres.In\obj\Debug\netstandard2.0\Reqres.
 C:\Users\kathe\source\repos\Reqres.In\Reqres.In\obj\Debug\netstandard2.0\Reqres.In.AssemblyInfoInputs.cache
 C:\Users\kathe\source\repos\Reqres.In\Reqres.In\obj\Debug\netstandard2.0\Reqres.In.AssemblyInfo.cs
 C:\Users\kathe\source\repos\Reqres.In\Reqres.In\bin\Debug\netstandard2.0\Reqres.In.dll.config
-C:\Users\irina\Downloads\Reqres.In\Reqres.In\obj\Debug\netstandard2.0\Reqres.In.csprojAssemblyReference.cache
 C:\Users\irina\Downloads\Reqres.In\Reqres.In\obj\Debug\netstandard2.0\Reqres.In.csproj.CoreCompileInputs.cache
 C:\Users\irina\Downloads\Reqres.In\Reqres.In\obj\Debug\netstandard2.0\Reqres.In.AssemblyInfoInputs.cache
 C:\Users\irina\Downloads\Reqres.In\Reqres.In\obj\Debug\netstandard2.0\Reqres.In.AssemblyInfo.cs
+C:\Users\irina\Downloads\Reqres.In\Reqres.In\bin\Debug\netstandard2.0\Reqres.In.dll.config
+C:\Users\irina\Downloads\Reqres.In\Reqres.In\bin\Debug\netstandard2.0\Reqres.In.deps.json
+C:\Users\irina\Downloads\Reqres.In\Reqres.In\bin\Debug\netstandard2.0\Reqres.In.dll
+C:\Users\irina\Downloads\Reqres.In\Reqres.In\bin\Debug\netstandard2.0\Reqres.In.pdb
+C:\Users\irina\Downloads\Reqres.In\Reqres.In\obj\Debug\netstandard2.0\Reqres.In.dll
+C:\Users\irina\Downloads\Reqres.In\Reqres.In\obj\Debug\netstandard2.0\Reqres.In.pdb

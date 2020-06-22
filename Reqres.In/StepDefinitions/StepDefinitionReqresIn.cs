@@ -17,13 +17,22 @@ namespace Reqres.In.StepDefinitions
     [Binding]
     public sealed class StepDefinitionReqresIn
     {
+        public ScenarioContext context;
+        public ReqresInApiClient _client;
+
+        public StepDefinitionReqresIn(ScenarioContext injectedContext, ReqresInApiClient client){
+            context = injectedContext;
+            _client = client;
+
+        }
+
         [Then(@"I get all users from (.*) page\(-s\) via Reqres\.in api")]
         [When(@"I get all users from (.*) page\(-s\) via Reqres\.in api")]
 
         public void WhenIGetAllUsersViaReqres_InApi(string page)
 
         {
-            int requestPage = string.IsNullOrEmpty(page) ? 0 : (page.Equals("all", StringComparison.InvariantCultureIgnoreCase) ? 0 : int.Parse(page);
+            int requestPage = string.IsNullOrEmpty(page) ? 0 : (page.Equals("all", StringComparison.InvariantCultureIgnoreCase) ? 0 : int.Parse(page));
             var response = _client.GetUsers(requestPage);
             context.Add(ContextConstans.ApiResponse, response);
         }
@@ -32,7 +41,7 @@ namespace Reqres.In.StepDefinitions
         public void ThenISeeThatStatusCodeWasReturnedInResponse(int statusCode)
         {
             var response = context.Get<IRestResponse>(ContextConstans.ApiResponse);
-            NUnit.Framework.Assert.AreEqual(statusCode, (int)response.StatusCode, "Status code returned by api is (int)response.StatusCode),but (int statusCode) is expected. "
+            NUnit.Framework.Assert.AreEqual(statusCode, (int)response.StatusCode, "Status code returned by api is (int)response.StatusCode),but (int statusCode) is expected. ");
         }
 
         [Then(@"I see that list users from (.*) page was returned in response")]
@@ -40,9 +49,9 @@ namespace Reqres.In.StepDefinitions
         public void ThenISeeThatListUsersWasReturnedInResponse(int page)
         {
             var response = context.Get<IRestResponse>(ContextConstans.ApiResponse);
-            var UsersList = new JsonDeserializer().Deserialize<UsersList>(response);
-            CollectionAssert.IsNotEmpty(Users.data, "users collection is empty,but not empty is expected");
-            NUnit.Framework.Assert.AreEqual(page, Users.page, "Users result page doesn't match expected one");
+            var usersList = new JsonDeserializer().Deserialize<UsersList>(response);
+            CollectionAssert.IsNotEmpty(usersList.data, "users collection is empty,but not empty is expected");
+            NUnit.Framework.Assert.AreEqual(page, usersList.page, "Users result page doesn't match expected one");
          }
         /*
         [Given(@"I have created user with (.*) and (.*)")]
