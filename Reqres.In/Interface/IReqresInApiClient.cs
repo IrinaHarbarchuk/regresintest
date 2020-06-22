@@ -1,4 +1,5 @@
-﻿using RestSharp;
+﻿using Reqres.In.ApiModels;
+using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -9,7 +10,7 @@ namespace Reqres.In
     public interface IReqresInApiClient
     {
         IRestResponse GetUsers(int page);
-        IRestResponse PostUser(User user);
+        IRestResponse PostUser(CreateUser user);
       //  void PutUser();
       //  void PutchUser();
       //  void DeleteUser();

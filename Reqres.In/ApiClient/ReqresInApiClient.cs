@@ -1,35 +1,36 @@
-﻿using RestSharp;
+﻿using Reqres.In.ApiModels;
+using RestSharp;
 using System;
 using System.Configuration;
 using TechTalk.SpecFlow.CommonModels;
 
 namespace Reqres.In
 {
-    class ReqresInApiClient : IReqresInApiClient
+    public class ReqresInApiClient : IReqresInApiClient
     {
         public readonly RestClient Client;
-        public ReqresInApiClient Client()
-        {    
+        public ReqresInApiClient()         
             {
-                Client = Client ?? RestClient();
+                Client = Client ?? new RestClient();
                 Client.BaseUrl = new Uri(ConfigurationManager.AppSettings.Get("ReqresInBaseUrl"));
             }
-        }
+        
 
         public IRestResponse GetUsers(int page)
         {
-            string resours = page=default(int) ? ($"users") : ($"users?page=(page)");
+            string resours = page==default(int) ? ($"users") : ($"users?page=(page)");
             IRestRequest req = new RestRequest(resours);
             var response = Client.Get(req);
             return response;
         }
 
 
-        public IRestResponse PostUser(User user) //уточнить
+        public IRestResponse PostUser(CreateUser user) //уточнить
         {
-            IRestRequest = new RestRequest("users");
+            IRestRequest req = new RestRequest("users");
+     
             req.AddJsonBody(user);
-            var response = Client.Post();
+            var response = Client.Post(req);
             return response;
         }
         public void DeleteUser()

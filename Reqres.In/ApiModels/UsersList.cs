@@ -4,8 +4,7 @@ using System.Text;
 
 namespace Reqres.In.ApiModels
 {
-    class UsersList
-    {
+    
         public class Datum
         {
             public int id { get; set; }
@@ -22,7 +21,7 @@ namespace Reqres.In.ApiModels
             public string text { get; set; }
         }
 
-        public class Users
+        public class UsersList
         {
             public int page { get; set; }
             public int per_page { get; set; }
@@ -31,5 +30,5 @@ namespace Reqres.In.ApiModels
             public IList<Datum> data { get; set; }
             public Ad ad { get; set; }
         }
-    }
+    
 }

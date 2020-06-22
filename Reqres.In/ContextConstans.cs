@@ -8,7 +8,7 @@ namespace Reqres.In
    public  class ContextConstans
     {
         public const string UserData = "User Data";
-        public const string Apiesponse = "ApiResponse";
+        public const string ApiResponse = "ApiResponse";
 
     }
 }
